@@ -11,19 +11,39 @@ const archivos = [
   'cumpleaños.json'
 ];
 
-if (!fs.existsSync(dataFolder)) {
-  fs.mkdirSync(dataFolder);
-  console.log('Carpeta "data" creada.');
+function initDataFiles() {
+  if (!fs.existsSync(dataFolder)) {
+    fs.mkdirSync(dataFolder);
+    console.log('Carpeta "data" creada.');
+  }
+
+  archivos.forEach(file => {
+    const filePath = path.join(dataFolder, file);
+    if (!fs.existsSync(filePath)) {
+      fs.writeFileSync(filePath, '{}');
+      console.log(`Archivo ${file} creado con contenido vacío.`);
+    }
+  });
 }
 
-archivos.forEach(file => {
-  const filePath = path.join(dataFolder, file);
-  if (!fs.existsSync(filePath)) {
+function readJSON(fileName) {
+  const filePath = path.join(dataFolder, fileName);
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    return JSON.parse(content);
+  } catch (e) {
     fs.writeFileSync(filePath, '{}');
-    console.log(`Archivo ${file} creado con contenido vacío.`);
-  } else {
-    console.log(`Archivo ${file} ya existe.`);
+    return {};
   }
-});
+}
 
-console.log('Inicialización de archivos completada.');
+function writeJSON(fileName, data) {
+  const filePath = path.join(dataFolder, fileName);
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+}
+
+module.exports = {
+  initDataFiles,
+  readJSON,
+  writeJSON
+};
