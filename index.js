@@ -286,6 +286,11 @@ client.on('message', async msg => {
 !sleep/dormir @usuario
 !smoke/fumar @usuario
 !think/pensando @usuario
-`;
-    msg.reply(listaComandos);
+;
+        msg.reply(listaComandos);
     }
+
+    // Puedes seguir agregando más comandos aquí abajo...
+});
+
+client.initialize();
