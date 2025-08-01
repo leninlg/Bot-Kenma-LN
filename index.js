@@ -210,9 +210,8 @@ client.on('message', async msg => {
 
     else if (command === '!info') {
     msg.reply('🤖 Soy el bot Kenma creado con whatsapp-web.js.\n' +
-              'Desarrollado por Len el más migajero' +
-              'Para ver los comandos disponibles usa *!ayuda*.');
-}
+              'Desarrollado por Len el más migajero.\n' + 'Para ver los comandos disponibles usa *!ayuda*.');} 
+
 else if (command === '!ayuda') {
     const listaComandos = `
 📋 *Lista completa de comandos disponibles:*
