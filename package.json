@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "dependencies": {
-    "whatsapp-web.js": "^1.18.5",
+  "dependencies": { "whatsapp-web.js": "^1.18.5",
     "qrcode-terminal": "^0.12.0"
   }
 }
