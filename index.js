@@ -166,7 +166,6 @@ client.on('message', async msg => {
     else if (command === '!tag') {
         if (!chat.isGroup) return msg.reply('Este comando solo funciona en grupos.');
         const participants = chat.participants.map(p => p.id._serialized);
-        // Obtener contactos para mencionar
         const mentions = [];
         for (const id of participants) {
             const c = await client.getContactById(id);
@@ -209,9 +208,11 @@ client.on('message', async msg => {
     }
 
     else if (command === '!info') {
-    msg.reply('🤖 Soy el bot Kenma creado con whatsapp-web.js.\n' + 'Desarrollado por Len el más migajero.\n' + 'Para ver los comandos disponibles usa *!ayuda*.');} 
-else if (command === '!ayuda') {
-    const listaComandos = `
+        msg.reply('🤖 Soy el bot Kenma creado con whatsapp-web.js.\nDesarrollado por Len el más migajero.\nPara ver los comandos disponibles usa *!ayuda*.');
+    } 
+
+    else if (command === '!ayuda') {
+        const listaComandos = `
 📋 *Lista completa de comandos disponibles:*
 
 🛠️ *Administración:*
@@ -284,5 +285,6 @@ else if (command === '!ayuda') {
 !smoke/fumar @usuario
 !think/pensando @usuario
 `;
-    msg.reply(listaComandos);
-}
+        msg.reply(listaComandos);
+    }
+});
