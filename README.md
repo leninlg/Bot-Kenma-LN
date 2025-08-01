@@ -2,7 +2,7 @@
 Bot de Whatsapp
 # Bot-Kenma-LN 🤖
 
-![Avatar del Bot](.Kenma.img.bot1)
+![Avatar del Bot](Kenma.img.bot1)
 
 Este es un bot de WhatsApp creado con [whatsapp-web.js](https://github.com/pedroslopez/whatsapp-web.js).
 
