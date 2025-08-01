@@ -213,32 +213,79 @@ client.on('message', async msg => {
                   'Desarrollado por tu nombre.\n' +
                   'Para ver los comandos disponibles, escribe !ayuda');
     }
-
     else if (command === '!ayuda') {
-        const listaComandos = `
-Lista de comandos disponibles:
-!grupo abrir/cerrar - Administrar grupo
-!setreglas [texto] - Establecer reglas
-!reglas - Ver reglas
-!setbienvenida [texto] - Establecer bienvenida
-!bienvenida - Ver bienvenida
-!setdespedida [texto] - Establecer despedida
-!despedida - Ver despedida
-!warn @usuario - Advertir usuario
-!verwarn @usuario - Ver advertencias
+    const listaComandos = `
+📋 *Lista completa de comandos disponibles:*
+
+🛠️ *Administración:*
+!grupo abrir/cerrar - Abrir o cerrar el grupo para todos o solo admins
+!setreglas [texto] - Establecer reglas del grupo
+!reglas - Mostrar reglas
+!setbienvenida [texto] - Establecer mensaje de bienvenida
+!bienvenida - Mostrar bienvenida
+!setdespedida [texto] - Establecer mensaje de despedida
+!despedida - Mostrar despedida
+!warn @usuario - Advertir a un usuario
+!verwarn @usuario - Ver advertencias de un usuario
+
+🎀 *Cariño con gifs:*
 !abrazo @usuario - Enviar abrazo
 !beso @usuario - Enviar beso
 !apapacho @usuario - Enviar apapacho
 !mimos @usuario - Enviar mimos
 !tequiero @usuario - Enviar mensaje de amor
+
+📢 *Menciones:*
 !tag - Mencionar a todos en el grupo
-!hora - Hora actual
-!fecha - Fecha actual
+
+⌚ *Utilidades:*
+!hora - Mostrar hora actual
+!fecha - Mostrar fecha actual
 !clima [ciudad] - Clima simulado
-!flip [texto] - Invierte texto
-!info - Info del bot
-!ayuda - Mostrar comandos
+!flip [texto] - Invierte el texto
+!info - Información del bot
+
+🎲 *Juegos y retos:*
+!ppt [piedra/papel/tijera] - Jugar piedra, papel o tijera contra el bot
+!reto - Te da un reto divertido para hacer
+
+💃 *Acciones y emociones (pueden mencionar a alguien):*
+!angry/enojado @usuario
+!bath/bañarse @usuario
+!bite/morder @usuario
+!bleh/lengua @usuario
+!blush/sonrojarse @usuario
+!bored/aburrido @usuario
+!coffe/cafe @usuario
+!cry/llorar @usuario
+!cuddle/acurrucarse @usuario
+!dance/bailar @usuario
+!drunk/borracho @usuario
+!facepalm/palmada @usuario
+!happy/feliz @usuario
+!hello/hola @usuario
+!hug/abrazar @usuario
+!kill/matar @usuario
+!kiss/besar @usuario
+!kiss2/besar2 @usuario
+!laugh/reirse @usuario
+!lick/lamer @usuario
+!love2/enamorada @usuario
+!patt/acariciar @usuario
+!poke/picar @usuario
+!pout/pucheros @usuario
+!ppcouple
+!pregg/embarazar @usuario
+!punch/golpear @usuario
+!run/correr @usuario
+!sad/triste @usuario
+!scared/asustada @usuario
+!seduce/seducir @usuario
+!shy/timida @usuario
+!slap/bofetada @usuario
+!sleep/dormir @usuario
+!smoke/fumar @usuario
+!think/pensando @usuario
 `;
-        msg.reply(listaComandos);
+    msg.reply(listaComandos);
     }
-});
