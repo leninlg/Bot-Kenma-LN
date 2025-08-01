@@ -211,9 +211,8 @@ client.on('message', async msg => {
     else if (command === '!info') {
         msg.reply('🤖 Soy un bot de WhatsApp creado con whatsapp-web.js.\n' +
                   'Desarrollado por tu nombre.\n' +
-                  'Para ver los comandos disponibles, escribe !ayuda');
-    }
-    else if (command === '!ayuda') {
+                  'Para ver los comandos disponibles 
+else if (command === '!ayuda') {
     const listaComandos = `
 📋 *Lista completa de comandos disponibles:*
 
@@ -286,11 +285,6 @@ client.on('message', async msg => {
 !sleep/dormir @usuario
 !smoke/fumar @usuario
 !think/pensando @usuario
-;
-        msg.reply(listaComandos);
-    }
-
-    // Puedes seguir agregando más comandos aquí abajo...
-});
-
-client.initialize();
+`;
+    msg.reply(listaComandos);
+}
