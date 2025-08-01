@@ -42,7 +42,7 @@ Este es un bot de WhatsApp creado con [whatsapp-web.js](https://github.com/pedro
 termux-setup-storage
 apt update && apt upgrade -y
 pkg install git nodejs ffmpeg imagemagick yarn
-git clone https://github.com/leninlg/Bot-Kenma-LN.git
+git clone https://github.com/leninlg/Bot-Kenma-LN
 cd Bot-Kenma-LN
 npm install
 node index.js
