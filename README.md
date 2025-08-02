@@ -22,8 +22,8 @@ Bot Kenma el más migajero hecho con [whatsapp-web.js](https://github.com/pedros
 ### 1. Abrir Termux y actualizar paquetes
 
 ```bash
-pkg update && pkg upgrade -y
-pkg install git nodejs -y
+termux-setup-storage
+apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 git clone https://github.com/leninlg/Bot-Kenma-LN.git
 cd Bot-Kenma-LN
 npm install
