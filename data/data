@@ -1,0 +1,47 @@
+{
+  "123456789@g.us": {
+    "bienvenida": true,
+    "mensaje": "¡Hola @usuario! Bienvenido al grupo @grupo ✨"
+  }
+}
+{
+  "521234567890@c.us": {
+    "nivel": 3,
+    "experiencia": 450
+  }
+}
+{
+  "521234567890@c.us": {
+    "monedas": 100
+  }
+}
+{
+  "521234567890@c.us": true,
+  "521111111111@c.us": true
+}
+{
+  "521234567890@c.us": {
+    "afk": true,
+    "razon": "Estoy ocupado estudiando",
+    "tiempo": 1691189345
+  }
+}
+{
+  "521111111111@c.us": {
+    "razon": "Uso indebido de comandos",
+    "fecha": "2025-08-01"
+  }
+}
+{
+  "521234567890@c.us": {
+    "conteo": 4,
+    "ultimoMensaje": 1691189900
+  }
+}
+{
+  "521234567890@c.us": {
+    "nombre": "Kenma",
+    "edad": 17,
+    "genero": "masculino"
+  }
+}
