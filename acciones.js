@@ -1,14 +1,14 @@
+// comandos/acciones.js
 module.exports = async (client, msg) => {
     const texto = msg.body.toLowerCase();
-    if (!texto.startsWith('!')) return; // Ignorar si no inicia con !
+    if (!texto.startsWith('!')) return; // Solo comandos con !
 
     const args = texto.split(' ');
-    const command = args[0]; // comando con !
+    const command = args[0]; // comando incluyendo !
 
     const mention = msg.mentionedIds && msg.mentionedIds.length > 0 ? msg.mentionedIds[0] : null;
     const mentionUser = id => id ? `@${id.replace(/@c.us/, '')}` : '';
 
-    // Comandos sin el punto, todos con prefijo !
     const comandos = {
         '!angry': ['😠 está enojado!', 'https://media.giphy.com/media/3o6ZtaO9BZHcOjmErm/giphy.gif'],
         '!enojado': ['😠 está enojado!', 'https://media.giphy.com/media/3o6ZtaO9BZHcOjmErm/giphy.gif'],
