@@ -4,45 +4,30 @@ Bot de Whatsapp
 
 ![Avatar del Bot](img).
 
-Este es un bot de WhatsApp creado con [whatsapp-web.js](https://github.com/pedroslopez/whatsapp-web.js).
+Bot Kenma el más migajero hecho con [whatsapp-web.js](https://github.com/pedroslopez/whatsapp-web.js) y configurado para usarse en Android mediante Termux. Incluye comandos de administración, multimedia, cariño, niveles, monedas, premium y más.
 
 ---
 
-## 📋 Comandos principales
+## 📱 Requisitos
 
-- `!grupo abrir/cerrar` — Administrar mensajes en grupo (solo admins)
-- `!setreglas [texto]` — Establecer reglas del grupo
-- `!reglas` — Mostrar reglas del grupo
-- `!setbienvenida [texto]` — Establecer mensaje de bienvenida
-- `!bienvenida` — Mostrar mensaje de bienvenida
-- `!setdespedida [texto]` — Establecer mensaje de despedida
-- `!despedida` — Mostrar mensaje de despedida
-- `!warn @usuario` — Advertir a un usuario
-- `!verwarn @usuario` — Ver advertencias de un usuario
-- `!abrazo @usuario` — Enviar abrazo virtual
-- `!beso @usuario` — Enviar beso virtual
-- `!apapacho @usuario` — Enviar apapacho virtual
-- `!mimos @usuario` — Enviar mimos virtuales
-- `!tequiero @usuario` — Enviar mensaje de amor
-- `!tag` — Mencionar a todos los miembros del grupo
-- `!hora` — Mostrar hora actual
-- `!fecha` — Mostrar fecha actual
-- `!clima [ciudad]` — Clima simulado de una ciudad
-- `!flip [texto]` — Invertir texto
-- `!info` — Información del bot
-- `!ayuda` — Mostrar esta lista de comandos
+- Dispositivo Android
+- App [Termux](https://f-droid.org/packages/com.termux/)
+- Node.js y Git instalados
+- Cuenta de WhatsApp con sesión activa
 
 ---
 
-## 🚀 Cómo usar el bot
+## ⚙️ Instalación en Termux
 
-1. **Clona este repositorio**
+### 1. Abrir Termux y actualizar paquetes
 
 ```bash
-termux-setup-storage
-apt update && apt upgrade -y
-pkg install git nodejs ffmpeg imagemagick yarn
-git clone https://github.com/leninlg/Bot-Kenma-LN
+pkg update && pkg upgrade -y
+pkg install git nodejs -y
+git clone https://github.com/leninlg/Bot-Kenma-LN.git
 cd Bot-Kenma-LN
 npm install
-node index.js
+mkdir -p data
+touch data/bienvenida.json data/niveles.json data/monedas.json data/premium.json
+touch data/afk.json data/baneados.json data/spam.json data/registro.json
+npm start
